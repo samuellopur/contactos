@@ -13,7 +13,6 @@ import lombok.ToString;
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
-@ToString
 public class Contacto {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -21,4 +20,14 @@ public class Contacto {
     String nombre;
     String celular;
     String email;
+
+    @Override
+    public String toString() {
+        return "Contacto{" +
+                "idContacto=" + idContacto +
+                ", nombre='" + nombre + '\'' +
+                ", celular='" + celular + '\'' +
+                ", email='" + email + '\'' +
+                '}';
+    }
 }
