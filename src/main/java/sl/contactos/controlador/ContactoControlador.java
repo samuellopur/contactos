@@ -22,7 +22,11 @@ public class ContactoControlador {
         List<Contacto> contactos = contactoServicio.listaContactos();
         contactos.forEach(contacto -> logger.info(contacto.toString()));
         modelo.put("contactos", contactos);
-
         return "index";
+    }
+
+    @GetMapping("/agregar")
+    public String mostrarAgregar(){
+        return "agregar";
     }
 }
